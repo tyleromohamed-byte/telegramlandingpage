@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free XAUUSD Signals | Join the Telegram Group</title>
+  <meta
+    name="description"
+    content="Join our free Telegram trading group for XAUUSD trade signals, market insight, and fast updates."
+  />
+  <style>
+    :root {
+      --bg: #070707;
+      --bg-soft: #0e0e0f;
+      --panel: rgba(18, 18, 18, 0.72);
+      --panel-strong: rgba(20, 20, 20, 0.92);
+      --text: #f6f1df;
+      --muted: #c2b79a;
+      --gold: #d4af37;
+      --gold-soft: #f3d67a;
+      --gold-deep: #8f6a17;
+      --line: rgba(212, 175, 55, 0.18);
+      --shadow: 0 20px 80px rgba(0, 0, 0, 0.45);
+      --radius: 24px;
+      --max: 1200px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.12), transparent 25%),
+        radial-gradient(circle at 80% 30%, rgba(255, 215, 128, 0.08), transparent 22%),
+        radial-gradient(circle at 50% 80%, rgba(212, 175, 55, 0.08), transparent 28%),
+        linear-gradient(180deg, #040404 0%, #0a0a0a 52%, #050505 100%);
+      color: var(--text);
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      position: relative;
+      isolation: isolate;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .bg-wrap {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .noise,
+    .grid,
+    .glow-ring,
+    .scan,
+    .orbs {
+      position: absolute;
+      inset: 0;
+    }
+
+    .noise {
+      opacity: 0.06;
+      background-image:
+        radial-gradient(rgba(255,255,255,0.9) 0.45px, transparent 0.6px);
+      background-size: 10px 10px;
+      mix-blend-mode: soft-light;
+    }
+
+    .grid {
+      background-image:
+        linear-gradient(rgba(212, 175, 55, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(212, 175, 55, 0.05) 1px, transparent 1px);
+      background-size: 70px 70px;
+      mask-image: radial-gradient(circle at center, black 30%, transparent 78%);
+      animation: gridFloat 18s linear infinite;
+      opacity: 0.55;
+    }
+
+    .scan::before {
+      content: "";
+      position: absolute;
+      left: -20%;
+      top: 0;
+      width: 40%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(212, 175, 55, 0.03) 35%,
+        rgba(255, 228, 153, 0.09) 50%,
+        rgba(212, 175, 55, 0.03) 65%,
+        transparent 100%
+      );
+      transform: skewX(-18deg);
+      animation: sweep 10s linear infinite;
+      filter: blur(8px);
+    }
+
+    .glow-ring::before,
+    .glow-ring::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      border: 1px solid rgba(212, 175, 55, 0.14);
+      box-shadow: 0 0 40px rgba(212, 175, 55, 0.08), inset 0 0 30px rgba(212, 175, 55, 0.04);
+    }
+
+    .glow-ring::before {
+      width: 900px;
+      height: 900px;
+      left: 50%;
+      top: 15%;
+      transform: translateX(-50%);
+      animation: pulseRing 10s ease-in-out infinite;
+    }
+
+    .glow-ring::after {
+      width: 620px;
+      height: 620px;
+      left: 50%;
+      top: 22%;
+      transform: translateX(-50%);
+      animation: pulseRing 8s ease-in-out infinite reverse;
+    }
+
+    .orbs span {
+      position: absolute;
+      display: block;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(255, 228, 153, 0.28), rgba(212, 175, 55, 0.02) 70%, transparent 100%);
+      filter: blur(8px);
+      animation: floatOrb linear infinite;
+    }
+
+    .orbs span:nth-child(1) {
+      width: 180px;
+      height: 180px;
+      left: 8%;
+      top: 12%;
+      animation-duration: 18s;
+    }
+
+    .orbs span:nth-child(2) {
+      width: 240px;
+      height: 240px;
+      left: 78%;
+      top: 18%;
+      animation-duration: 22s;
+      animation-delay: -4s;
+    }
+
+    .orbs span:nth-child(3) {
+      width: 160px;
+      height: 160px;
+      left: 18%;
+      top: 72%;
+      animation-duration: 20s;
+      animation-delay: -8s;
+    }
+
+    .orbs span:nth-child(4) {
+      width: 300px;
+      height: 300px;
+      left: 68%;
+      top: 66%;
+      animation-duration: 26s;
+      animation-delay: -3s;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+      background: linear-gradient(180deg, rgba(6, 6, 6, 0.82), rgba(6, 6, 6, 0.42));
+      border-bottom: 1px solid rgba(212, 175, 55, 0.08);
+    }
+
+    .nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(212, 175, 55, 0.28);
+      background: radial-gradient(circle at 30% 30%, rgba(255, 230, 160, 0.24), rgba(212, 175, 55, 0.08));
+      color: var(--gold-soft);
+      box-shadow: inset 0 0 20px rgba(212, 175, 55, 0.08);
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.96rem;
+      transition: color 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      color: #111;
+      background: linear-gradient(135deg, #f5db8f, #d4af37 45%, #b88919 100%);
+      box-shadow: 0 12px 30px rgba(212, 175, 55, 0.24);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 16px 40px rgba(212, 175, 55, 0.34);
+    }
+
+    .btn-secondary {
+      color: var(--text);
+      border-color: rgba(212, 175, 55, 0.22);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .hero {
+      padding: 92px 0 56px;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: rgba(212, 175, 55, 0.08);
+      border: 1px solid rgba(212, 175, 55, 0.14);
+      color: var(--gold-soft);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 20px;
+      backdrop-filter: blur(10px);
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3rem, 7vw, 6.2rem);
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      max-width: 850px;
+      text-shadow: 0 8px 40px rgba(212, 175, 55, 0.12);
+    }
+
+    .gold-text {
+      background: linear-gradient(180deg, #fff4c8 0%, #f2d375 35%, #d4af37 75%, #8d6814 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 1.08rem;
+      margin: 24px 0 0;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .hero-proof {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+      color: #e6dcc0;
+      font-size: 0.94rem;
+    }
+
+    .proof-pill {
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(212, 175, 55, 0.14);
+      background: rgba(255, 255, 255, 0.025);
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-card,
+    .card {
+      position: relative;
+      border-radius: var(--radius);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)),
+        var(--panel);
+      border: 1px solid rgba(212, 175, 55, 0.14);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero-card {
+      padding: 28px;
+      min-height: 540px;
+    }
+
+    .hero-card::before,
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.06), transparent 30%, transparent 70%, rgba(212,175,55,0.07));
+      pointer-events: none;
+    }
+
+    .signal-screen {
+      position: relative;
+      height: 100%;
+      min-height: 480px;
+      border-radius: 18px;
+      padding: 24px;
+      background:
+        linear-gradient(180deg, rgba(8, 8, 8, 0.9), rgba(16, 16, 16, 0.98)),
+        #0b0b0b;
+      border: 1px solid rgba(212, 175, 55, 0.12);
+      overflow: hidden;
+    }
+
+    .signal-screen::before {
+      content: "";
+      position: absolute;
+      inset: -20% -10%;
+      background:
+        radial-gradient(circle at 60% 35%, rgba(212,175,55,0.18), transparent 20%),
+        radial-gradient(circle at 40% 70%, rgba(255,228,153,0.08), transparent 18%);
+      animation: pulseGlow 8s ease-in-out infinite;
+    }
+
+    .terminal-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+      margin-bottom: 20px;
+    }
+
+    .terminal-dots {
+      display: flex;
+      gap: 8px;
+    }
+
+    .terminal-dots span {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.18);
+    }
+
+    .terminal-title {
+      color: var(--muted);
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .mini-chart {
+      position: relative;
+      z-index: 2;
+      margin-top: 18px;
+      height: 210px;
+      border-radius: 16px;
+      background:
+        linear-gradient(rgba(212,175,55,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(212,175,55,0.06) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      background-size: 32px 32px, 32px 32px, auto;
+      border: 1px solid rgba(212, 175, 55, 0.08);
+      overflow: hidden;
+    }
+
+    .chart-line,
+    .chart-line-2 {
+      position: absolute;
+      inset: 0;
+    }
+
+    .chart-line svg,
+    .chart-line-2 svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .chart-line path {
+      stroke: #f0d27a;
+      stroke-width: 3;
+      fill: none;
+      filter: drop-shadow(0 0 8px rgba(240, 210, 122, 0.4));
+      stroke-dasharray: 1200;
+      stroke-dashoffset: 1200;
+      animation: drawLine 5s ease forwards infinite;
+    }
+
+    .chart-line-2 path {
+      stroke: rgba(212, 175, 55, 0.35);
+      stroke-width: 2;
+      fill: none;
+      stroke-dasharray: 900;
+      stroke-dashoffset: 900;
+      animation: drawLine 7s ease forwards infinite 0.6s;
+    }
+
+    .signal-boxes {
+      position: relative;
+      z-index: 2;
+      margin-top: 22px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .signal-item {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: center;
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(212,175,55,0.1);
+      backdrop-filter: blur(10px);
+      animation: cardFloat 6s ease-in-out infinite;
+    }
+
+    .signal-item:nth-child(2) {
+      animation-delay: -1.5s;
+    }
+
+    .signal-item:nth-child(3) {
+      animation-delay: -3s;
+    }
+
+    .signal-label {
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .signal-main {
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .tag {
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.84rem;
+      white-space: nowrap;
+    }
+
+    .tag-buy {
+      color: #101010;
+      background: linear-gradient(135deg, #ffe8a4, #d4af37);
+    }
+
+    .tag-focus {
+      color: var(--gold-soft);
+      border: 1px solid rgba(212,175,55,0.18);
+      background: rgba(212,175,55,0.08);
+    }
+
+    section {
+      padding: 34px 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 10px;
+    }
+
+    .card {
+      padding: 28px;
+    }
+
+    .stat-number {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2.3rem;
+      color: var(--gold-soft);
+      margin: 0 0 8px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 24px;
+    }
+
+    .section-head h2 {
+      margin: 0 0 10px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.02;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .benefit-icon {
+      width: 50px;
+      height: 50px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      margin-bottom: 18px;
+      color: #111;
+      background: linear-gradient(135deg, #f9e6a8, #d4af37);
+      font-weight: 800;
+      box-shadow: 0 10px 24px rgba(212, 175, 55, 0.18);
+    }
+
+    .benefit h3,
+    .faq-item h3,
+    .cta-panel h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.18rem;
+    }
+
+    .cta-panel {
+      padding: 34px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 20px;
+      align-items: center;
+      background:
+        radial-gradient(circle at top left, rgba(212,175,55,0.12), transparent 30%),
+        linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02)),
+        var(--panel-strong);
+    }
+
+    .cta-panel p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 700px;
+    }
+
+    .cta-panel .btn {
+      width: 100%;
+      min-height: 58px;
+      font-size: 1rem;
+    }
+
+    .faq {
+      display: grid;
+      gap: 18px;
+    }
+
+    .faq-item p {
+      margin-bottom: 0;
+    }
+
+    footer {
+      padding: 24px 0 60px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .footer-note {
+      color: #a99c7f;
+      font-size: 0.92rem;
+      line-height: 1.7;
+      border-top: 1px solid rgba(212, 175, 55, 0.1);
+      padding-top: 22px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes sweep {
+      0% {
+        transform: translateX(-20%) skewX(-18deg);
+      }
+      100% {
+        transform: translateX(340%) skewX(-18deg);
+      }
+    }
+
+    @keyframes pulseRing {
+      0%, 100% {
+        transform: translateX(-50%) scale(0.98);
+        opacity: 0.42;
+      }
+      50% {
+        transform: translateX(-50%) scale(1.04);
+        opacity: 0.82;
+      }
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 0.8;
+      }
+      50% {
+        transform: scale(1.08) rotate(8deg);
+        opacity: 1;
+      }
+    }
+
+    @keyframes floatOrb {
+      0%, 100% {
+        transform: translate3d(0, 0, 0) scale(1);
+      }
+      25% {
+        transform: translate3d(20px, -28px, 0) scale(1.05);
+      }
+      50% {
+        transform: translate3d(-16px, 14px, 0) scale(0.96);
+      }
+      75% {
+        transform: translate3d(18px, 30px, 0) scale(1.03);
+      }
+    }
+
+    @keyframes gridFloat {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(22px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes drawLine {
+      0% {
+        stroke-dashoffset: 1200;
+        opacity: 0.1;
+      }
+      20% {
+        opacity: 1;
+      }
+      60% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+      }
+      100% {
+        stroke-dashoffset: -120;
+        opacity: 0.25;
+      }
+    }
+
+    @keyframes cardFloat {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-6px);
+      }
+    }
+
+    @media (max-width: 1050px) {
+      .hero-grid,
+      .cta-panel,
+      .benefits-grid,
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        min-height: auto;
+      }
+
+      .cta-panel .btn {
+        width: auto;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .nav-links a:not(.nav-cta) {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 64px;
+      }
+
+      .hero h1 {
+        line-height: 1.02;
+      }
+
+      .hero-card,
+      .card,
+      .cta-panel {
+        padding: 22px;
+      }
+
+      .signal-screen {
+        min-height: 420px;
+        padding: 18px;
+      }
+
+      .container {
+        width: min(var(--max), calc(100% - 20px));
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="bg-wrap" aria-hidden="true">
+      <div class="noise"></div>
+      <div class="grid"></div>
+      <div class="glow-ring"></div>
+      <div class="scan"></div>
+      <div class="orbs">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <header>
+      <div class="container nav">
+        <a href="#" class="brand">
+          <span class="brand-mark">X</span>
+          <span>Elite Gold Signals</span>
+        </a>
+
+        <div class="nav-links">
+          <a href="#benefits">Why Join</a>
+          <a href="#faq">FAQ</a>
+          <a href="[t.me](https://t.me/yourgroup)" class="btn btn-primary nav-cta" target="_blank" rel="noopener noreferrer">
+            Get Free Access
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="reveal">
+            <div class="eyebrow">Free Telegram Access • XAUUSD Focus</div>
+            <h1>
+              Luxury-grade
+              <span class="gold-text">XAUUSD trade alerts</span>
+              delivered free on Telegram
+            </h1>
+            <p>
+              Join our free Telegram signal channel for focused XAUUSD trade ideas, clean market direction,
+              and fast-access updates designed for traders who want high-quality setups without the noise.
+            </p>
+
+            <div class="hero-actions">
+              <a
+                href="[t.me](https://t.me/yourgroup)"
+                class="btn btn-primary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Join Free Telegram Group
+              </a>
+
+              <a href="#benefits" class="btn btn-secondary">
+                Explore Benefits
+              </a>
+            </div>
+
+            <div class="hero-proof">
+              <div class="proof-pill">Free access</div>
+              <div class="proof-pill">XAUUSD-focused</div>
+              <div class="proof-pill">Fast Telegram delivery</div>
+            </div>
+          </div>
+
+          <div class="hero-card reveal">
+            <div class="signal-screen">
+              <div class="terminal-top">
+                <div class="terminal-dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="terminal-title">Live Market Focus</div>
+              </div>
+
+              <div class="mini-chart">
+                <div class="chart-line-2">
+                  <svg viewBox="0 0 600 220" preserveAspectRatio="none">
+                    <path d="M0,170 C60,120 100,130 150,110 C205,88 250,145 300,122 C350,100 390,76 430,84 C470,92 520,52 600,32"></path>
+                  </svg>
+                </div>
+
+                <div class="chart-line">
+                  <svg viewBox="0 0 600 220" preserveAspectRatio="none">
+                    <path d="M0,185 C70,168 100,92 155,98 C212,104 220,145 280,132 C345,118 348,76 410,66 C470,56 505,95 600,24"></path>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="signal-boxes">
+                <div class="signal-item">
+                  <div>
+                    <div class="signal-label">Market</div>
+                    <div class="signal-main">XAUUSD / Gold</div>
+                  </div>
+                  <div class="tag tag-focus">Prime Focus</div>
+                </div>
+
+                <div class="signal-item">
+                  <div>
+                    <div class="signal-label">Access</div>
+                    <div class="signal-main">Telegram Signal Channel</div>
+                  </div>
+                  <div class="tag tag-buy">Free</div>
+                </div>
+
+                <div class="signal-item">
+                  <div>
+                    <div class="signal-label">Delivery</div>
+                    <div class="signal-main">Quick updates when setups appear</div>
+                  </div>
+                  <div class="tag tag-focus">Instant</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="benefits">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2>Built for traders who want <span class="gold-text">precision over chaos</span></h2>
+            <p class="muted">
+              The page is designed to feel premium and focused, with one clear goal:
+              get visitors to join your free Telegram group for XAUUSD signals.
+            </p>
+          </div>
+
+          <div class="benefits-grid">
+            <div class="card benefit reveal">
+              <div class="benefit-icon">01</div>
+              <h3>Focused on XAUUSD</h3>
+              <p class="muted">
+                Clear positioning around gold trades helps the offer feel specific, serious, and higher value.
+              </p>
+            </div>
+
+            <div class="card benefit reveal">
+              <div class="benefit-icon">02</div>
+              <h3>Luxury visual identity</h3>
+              <p class="muted">
+                Gold gradients, glass panels, ambient motion, and premium spacing create a high-end first impression.
+              </p>
+            </div>
+
+            <div class="card benefit reveal">
+              <div class="benefit-icon">03</div>
+              <h3>CTA-first layout</h3>
+              <p class="muted">
+                Repeated join buttons and streamlined copy keep attention on the free-access Telegram action.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="stats">
+            <div class="card reveal">
+              <p class="stat-number">01</p>
+              <p class="muted">
+                One primary action: join the free Telegram signal group.
+              </p>
+            </div>
+
+            <div class="card reveal">
+              <p class="stat-number">24/7</p>
+              <p class="muted">
+                The design feels active at all times through subtle market-inspired background motion.
+              </p>
+            </div>
+
+            <div class="card reveal">
+              <p class="stat-number">XAUUSD</p>
+              <p class="muted">
+                Tight niche positioning makes the landing page more convincing than a generic trading page.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="card cta-panel reveal">
+            <div>
+              <h3>Get free access to the Telegram signal channel</h3>
+              <p>
+                If your visitors are interested in gold trading, do not make them hunt for the link.
+                Put the Telegram invite front and center and give them a fast, low-friction way to join.
+              </p>
+            </div>
+
+            <div>
+              <a
+                href="[t.me](https://t.me/yourgroup)"
+                class="btn btn-primary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Access the Free Telegram Group
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq">
+        <div class="container">
+          <div class="section-head reveal">
+            <h2>FAQ</h2>
+          </div>
+
+          <div class="faq">
+            <div class="card faq-item reveal">
+              <h3>What is this group for?</h3>
+              <p class="muted">
+                This landing page positions your Telegram community as a free channel for XAUUSD trade signals and market updates.
+              </p>
+            </div>
+
+            <div class="card faq-item reveal">
+              <h3>Is access free?</h3>
+              <p class="muted">
+                Yes. The copy and CTA are built around free access so the entry barrier stays low.
+              </p>
+            </div>
+
+            <div class="card faq-item reveal">
+              <h3>Can this page be customized?</h3>
+              <p class="muted">
+                Yes. You can swap the brand name, Telegram link, wording, trust statements, and visual effects easily.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-note reveal">
+          Trading involves risk, and past performance does not guarantee future results. This page should not promise profits
+          or guaranteed outcomes. Keep the message aspirational, premium, and clear without making unrealistic claims.
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const reveals = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      {
+        threshold: 0.12
+      }
+    );
+
+    reveals.forEach((item) => observer.observe(item));
+  </script>
+</body>
+</html>
